@@ -1,0 +1,75 @@
+3.5.2 Data Exploration and Variable selection
+The data was then imported into SAS Enterprise Miner. The data were explored to obtain information about necessary steps to further improve the reliability of the data. Not only that, this step is necessary to prepare the data for modelling. Figure 3.2 depicts the flow of data exploration to get insight on which variables that have the highest worth, while Figure 3.3 show
+the variable worth in relation to the target variable.
+The variable was also selected based on previous work because of the relevance and significance to the model. The final variable selected are listed in Table 3.4.
+
+
+
+
+Flight Operation Data
+
+MONTH	Month
+DAY_OF_MONTH	Day of month
+DAY_OF_WEEK	Day of week
+CARRIER	Code for carrier identification assigned by IATA
+ORIGIN_AIRPORT_ID	Origin airport ID assigned by US DOT
+ORIGIN	Origin airport
+ORIGIN_TmpF	Air temperature (Fahrenheit) at origin 
+ORIGIN_dwpf	Dew point temperature (Fahrenheit) at origin
+ORIGIN_relh	Relative humidity (%) at origin
+ORIGIN_sknt	Wind speed (knot) at origin
+ORIGIN_alti	Pressure altimeter (inch) at origin
+ORIGIN_mslp	Sea level pressure (millibar) at origin
+ORIGIN_vsby	Visibility (miles) at origin
+ORIGIN_skyc1	Sky level 1 coverage at origin
+DEST_AIRPORT_ID	Destination airport ID assigned by US DOT
+DEST	Destination airport
+DEST_TmpF	Air temperature (Fahrenheit) at destination
+DEST_dwpf	Dew point temperature (Fahrenheit) at destination
+DEST_relh	Relative humidity (%) at destination
+DEST_sknt	Wind speed (knot) at destination
+DEST_alti	Pressure altimeter (inch) at destination
+DEST_mslp	Sea level pressure (millibar) at destination
+DEST_vsby	Visibility (miles) at destination
+DEST_skyc1	Sky level 1 coverage at destination
+DEP_DELAY_NEW	Arrival delay time (minute)
+DEP_DEL15	Flight that has arrival delay time of 15 minutes or more
+CRS_ARR_TIME	Computer reservation system arrival time
+ARR_DELAY_NEW	Arrival delay time (minute)
+ARR_DEL15	Flight that has arrival delay time of 15 minutes or more
+AIR_TIME	Flight time (minute)
+DISTANCE	Distance between airports(miles)
+
+Weather Data
+MONTH Month
+DAY_OF_MONTH
+Day of month DAY_OF_WEEK Day of week
+CARRIER
+Code for carrier identification assigned by IATA ORIGIN_AIRPORT_ID Origin airport ID assigned by US DOT
+ORIGIN
+Origin airport ORIGIN_TmpF Air temperature (Fahrenheit) at origin
+ORIGIN_dwpf
+Dew point temperature (Fahrenheit) at origin ORIGIN_relh Relative humidity (%) at origin
+ORIGIN_sknt
+Wind speed (knot) at origin ORIGIN_alti Pressure altimeter (inch) at origin
+ORIGIN_mslp
+Sea level pressure (millibar) at origin ORIGIN_vsby Visibility (miles) at origin
+ORIGIN_skyc1
+Sky level 1 coverage at origin DEST_AIRPORT_ID Destination airport ID assigned by US DOT
+DEST
+Destination airport DEST_TmpF Air temperature (Fahrenheit) at destination
+DEST_dwpf
+Dew point temperature (Fahrenheit) at destination DEST_relh Relative humidity (%) at destination
+DEST_sknt
+Wind speed (knot) at destination DEST_alti Pressure altimeter (inch) at destination
+DEST_mslp
+Sea level pressure (millibar) at destination DEST_vsby Visibility (miles) at destination
+DEST_skyc1
+Sky level 1 coverage at destination DEP_DELAY_NEW Arrival delay time (minute)
+DEP_DEL15
+Flight that has arrival delay time of 15 minutes or more CRS_ARR_TIME Computer reservation system arrival time
+ARR_DELAY_NEW
+Arrival delay time (minute) ARR_DEL15 Flight that has arrival delay time of 15 minutes or more
+AIR_TIME
+Flight time (minute) DISTANCE Distance between airports(miles)
+
