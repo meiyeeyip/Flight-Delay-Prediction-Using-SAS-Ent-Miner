@@ -1,0 +1,38 @@
+The cleaned data was then inputted into R program. The data were randomised and partitioned using the caret package. The portioning followed the ratio of 8:2. The 80% was used for training and validation using 10-fold cross validation. The remaining 20% was used for scoring to evaluate the reliability of the model. 
+
+
+#Import data
+Flight <- read.csv("C:/Users/yip_m/Documents/Capstone Data/Deleted and replaced Null Values.csv")
+
+#Change the data type of variable for Flight
+Flight$ARR_DEL15 <- factor(Flight$ARR_DEL15)
+Flight$MONTH <- factor(Flight$MONTH)
+Flight$DAY_OF_MONTH <- factor(Flight$DAY_OF_MONTH)
+Flight$DAY_OF_WEEK <- factor(Flight$DAY_OF_WEEK)
+Flight$ORIGIN_AIRPORT_ID <- factor(Flight$ORIGIN_AIRPORT_ID)
+Flight$DEST_AIRPORT_ID <- factor(Flight$DEST_AIRPORT_ID)
+Flight$DEP_DEL15 <- factor(Flight$DEP_DEL15)
+Flight$AIR_TIME <- as.numeric(Flight$AIR_TIME)
+
+
+str(Flight)
+
+
+#Data Partition of cleaned data into training and score data#
+
+#Data import
+Flight1 <- read.csv("C:/Users/yip_m/Documents/Capstone Data/Cleaned Full Data.csv")
+
+
+# Data randomization
+FlightRandom <- Flight1[order(runif(nrow(Flight1))),]
+str(FlightRandom)
+
+
+# Data Partition to training and testing
+library(caret)
+
+TrainIndex <- createDataPartition(FlightRandom$ARR_DEL15, p = 0.8, list = FALSE, times = 1)
+
+FlightTrain <- FlightRandom[TrainIndex,]
+FlightTest <- FlightRandom[-TrainIndex,]
